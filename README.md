@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://github.com/abizmo/social-media-dashboard-with-theme-switcher](https://github.com/abizmo/social-media-dashboard-with-theme-switcher)
+- Live Site URL: [https://abizmo.github.io/social-media-dashboard-with-theme-switcher/](https://abizmo.github.io/social-media-dashboard-with-theme-switcher/)
 
 ## My process
 
