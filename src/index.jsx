@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Header from './components/Header';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -7,10 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <main className="container">
-      Social Media Dashboard
-      Total Followers: 23,004
-
-      Dark Mode
+      <Header />
 
       @nathanf
       1987
