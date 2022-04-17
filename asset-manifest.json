@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/social-media-dashboard-with-theme-switcher/static/css/main.63b2e82c.css",
+    "main.js": "/social-media-dashboard-with-theme-switcher/static/js/main.273b31df.js",
+    "index.html": "/social-media-dashboard-with-theme-switcher/index.html",
+    "main.63b2e82c.css.map": "/social-media-dashboard-with-theme-switcher/static/css/main.63b2e82c.css.map",
+    "main.273b31df.js.map": "/social-media-dashboard-with-theme-switcher/static/js/main.273b31df.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63b2e82c.css",
+    "static/js/main.273b31df.js"
+  ]
+}
