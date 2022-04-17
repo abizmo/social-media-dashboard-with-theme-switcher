@@ -1,8 +1,125 @@
+/* Custom properties */
+:root {
+  --clr-accent-green: hsl(163 72% 41%);
+  --clr-accent-red: hsl(356 69% 56%);
+  /* light theme */
+  --clr-toggle: hsl(230 22% 74%);
+  --clr-bg: hsl(0 0% 100%);
+  --clr-top-bg-pattern: hsl(225 100% 98%);
+  --clr-card-bg: hsl(227 47% 96%);
+  --clr-text-secondary: hsl(228 12% 44%);
+  --clr-text-primary: hsl(230 17% 14%);
+  
+  /* brand colors */
+  --clr-facebook: hsl(208 92% 53%);
+  --clr-twitter: hsl(203 89% 53%);
+  --clr-instagram: linear-gradient(90deg, hsl(37 97% 70%), hsl(329 70% 58%));
+  --clr-youtube: hsl(348 97% 39%);
+
+  --ff-sans: 'Inter', sans-serif;
+  --fs-900: 3.5rem;
+  --fs-800: 2rem;
+  --fs-700: clamp(1.5rem, 1vw + 1.1rem, 1.75rem);
+  --fs-600: 1.5rem;
+  --fs-500: 1rem;
+  --fs-400: .875rem;
+  --fs-200: .75rem;
+  --fs-100: .6875rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* dark theme */
+    --clr-toggle: linear-gradient(90deg, hsl(210 78% 56%), hsl(146 68% 55%));
+    --clr-bg: hsl(230 17% 14%);
+    --clr-top-bg-pattern: hsl(232 19% 15%);
+    --clr-card-bg: hsl(228 28% 20%);
+    --clr-text-secondary: hsl(228 34% 66%);
+    --clr-text-primary: hsl(0 0% 100%);
+  }
+}
+/* End Custom properties */
+/* Reset Section */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* End Reset Section */
+
+body {
+  background: var(--clr-bg);
+  color: var(--clr-text-primary);
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  line-height: 1.1;
+  min-height: 100vh;
+}
+
+/* Utility classes */
+.container {
+  margin-inline: auto;
+  max-width: 72rem;
+  padding-inline: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.letter-spacing-1 {
+  letter-spacing: -0.03em;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 0.005em;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 0.01em;
+}
+
+.letter-spacing-4 {
+  letter-spacing: 0.42em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Footer css */
 .attribution {
-  font-size: 11px;
+  font-size: var(--fs-100);
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--clr-text-secondary);
 }
