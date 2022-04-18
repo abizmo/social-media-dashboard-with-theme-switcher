@@ -27,16 +27,14 @@
   --fs-100: .6875rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* dark theme */
-    --clr-toggle: linear-gradient(90deg, hsl(210 78% 56%), hsl(146 68% 55%));
-    --clr-bg: hsl(230 17% 14%);
-    --clr-top-bg-pattern: hsl(232 19% 15%);
-    --clr-card-bg: hsl(228 28% 20%);
-    --clr-text-secondary: hsl(228 34% 66%);
-    --clr-text-primary: 0 0% 100%;
-  }
+[data-theme="dark"] {
+  /* dark theme */
+  --clr-toggle: linear-gradient(90deg, hsl(210 78% 56%), hsl(146 68% 55%));
+  --clr-bg: hsl(230 17% 14%);
+  --clr-top-bg-pattern: hsl(232 19% 15%);
+  --clr-card-bg: hsl(228 28% 20%);
+  --clr-text-secondary: hsl(228 34% 66%);
+  --clr-text-primary: 0 0% 100%;
 }
 /* End Custom properties */
 /* Reset Section */
@@ -66,11 +64,10 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
 /* End Reset Section */
 
 body {
-  background: var(--clr-bg);
-  color: hsl( var(--clr-text-primary) );
   font-family: var(--ff-sans);
   font-size: var(--fs-400);
   line-height: 1.1;
@@ -79,6 +76,8 @@ body {
 
 /* Utility classes */
 .container {
+  background: var(--clr-bg);
+  color: hsl( var(--clr-text-primary) );
   margin-inline: auto;
   max-width: 72rem;
   padding-inline: 1.5rem;
