@@ -1,7 +1,44 @@
 import React, { useContext } from 'react';
 
 import { ThemeContext } from '../../ThemeContext';
+import FollowersCard from './FollowersCard';
 import Header from './Header';
+import styles from './Dashboard.module.css';
+
+const data = [
+  {
+    label: 'followers',
+    network: 'facebook',
+    stat: 1987,
+    trend: 'up',
+    trendStat: 12,
+    username: '@nathanf',
+  },
+  {
+    label: 'followers',
+    network: 'twitter',
+    stat: '1044',
+    trend: 'up',
+    trendStat: 99,
+    username: '@nathanf',
+  },
+  {
+    label: 'followers',
+    network: 'instagram',
+    stat: '11k',
+    trend: 'up',
+    trendStat: 1099,
+    username: '@realnathanf',
+  },
+  {
+    label: 'subscribers',
+    network: 'youtube',
+    stat: '8239',
+    trend: 'down',
+    trendStat: 144,
+    username: 'Nathan F.',
+  },
+];
 
 function Dashboard() {
   const { dark } = useContext(ThemeContext);
@@ -9,29 +46,25 @@ function Dashboard() {
   return (
     <div
       className="container"
+      style={{ paddingBlock: '2rem' }}
       data-theme={dark ? 'dark' : 'light'}
     >
       <Header />
 
-      @nathanf
-      1987
-      Followers
-      12 Today
-
-      @nathanf
-      1044
-      Followers
-      99 Today
-
-      @realnathanf
-      11k
-      Followers
-      1099 Today
-
-      Nathan F.
-      8239
-      Subscribers
-      144 Today
+      <div className={`grid ${styles.list}`}>
+        { data.map(({
+          label, network, stat, trend, trendStat,
+        }) => (
+          <FollowersCard
+            key={network}
+            label={label}
+            network={network}
+            stat={stat}
+            trend={trend}
+            trendStat={trendStat}
+          />
+        ))}
+      </div>
 
       Overview - Today
 

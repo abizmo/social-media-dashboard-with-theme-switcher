@@ -1,0 +1,15 @@
+.list {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 30rem) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60rem) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

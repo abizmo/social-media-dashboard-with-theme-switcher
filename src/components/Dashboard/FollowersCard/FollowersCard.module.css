@@ -1,0 +1,41 @@
+.card {
+  --gap: 1.5rem;
+  align-items: center;
+  background-color: var(--clr-card-bg);
+  border-radius: .25rem;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+  padding-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  background: var(--clr-social, transparent);
+  content: ' ';
+  height: .25rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.title {
+  --gap: .5rem;
+  align-items: center;
+}
+
+.followers {
+  --gap: .25rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.trend {
+  --gap: .5rem;
+  align-items: center;
+  color: var(--clr-trend);
+}
+
+.trend img {
+  height: .375rem;
+}
