@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 
-import ThemeContext from '../../../ThemeContext';
+import { ThemeContext } from '../../../ThemeContext';
 import styles from './Header.module.css';
 
 function Header() {
-  const { dark, handleSwitchMode } = useContext(ThemeContext);
+  const { dark, toggleDark } = useContext(ThemeContext);
 
   return (
     <div
@@ -22,7 +22,7 @@ function Header() {
           aria-controls="dark-mode"
           aria-checked={dark}
           role="switch"
-          onClick={handleSwitchMode}
+          onClick={toggleDark}
         >
           <span className="sr-only">Change Mode</span>
         </button>

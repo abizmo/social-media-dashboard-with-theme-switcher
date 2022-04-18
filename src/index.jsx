@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client';
 
 import Dashboard from './components/Dashboard';
 import './index.css';
+import { ThemeContextProvider } from './ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <Dashboard />
+    <ThemeContextProvider>
+      <Dashboard />
+    </ThemeContextProvider>
     <footer className="attribution">
       Challenge by
       {' '}
