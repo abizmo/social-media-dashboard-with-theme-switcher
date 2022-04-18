@@ -1,72 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import Dashboard from './components/Dashboard';
 import './index.css';
+import { ThemeContextProvider } from './ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <main>
-      Social Media Dashboard
-      Total Followers: 23,004
-
-      Dark Mode
-
-      @nathanf
-      1987
-      Followers
-      12 Today
-
-      @nathanf
-      1044
-      Followers
-      99 Today
-
-      @realnathanf
-      11k
-      Followers
-      1099 Today
-
-      Nathan F.
-      8239
-      Subscribers
-      144 Today
-
-      Overview - Today
-
-      Page Views
-      87
-      3%
-
-      Likes
-      52
-      2%
-
-      Likes
-      5462
-      2257%
-
-      Profile Views
-      52k
-      1375%
-
-      Retweets
-      117
-      303%
-
-      Likes
-      507
-      553%
-
-      Likes
-      107
-      19%
-
-      Total Views
-      1407
-      12%
-
-    </main>
+    <ThemeContextProvider>
+      <Dashboard />
+    </ThemeContextProvider>
     <footer className="attribution">
       Challenge by
       {' '}
