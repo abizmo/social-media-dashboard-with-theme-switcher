@@ -16,11 +16,26 @@
   padding-top: 1rem;
 }
 
+@media (min-width: 48rem) {
+  .header {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .darkMode {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+
 .switch {
   aspect-ratio: 2;
   background: var(--clr-toggle);
   border: none;
   border-radius: .75rem;
+  cursor: pointer;
   height: 1.5rem;
   position: relative;
 }
