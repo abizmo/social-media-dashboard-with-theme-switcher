@@ -9,7 +9,7 @@ const data = [
   {
     label: 'followers',
     network: 'facebook',
-    stat: 1987,
+    stat: '1987',
     trend: 'up',
     trendStat: 12,
     username: '@nathanf',
@@ -66,7 +66,12 @@ function Dashboard() {
         ))}
       </div>
 
-      Overview - Today
+      <h2
+        className="fs-600 letter-spacing-1 text-secondary"
+        style={{ marginBottom: '1.5rem' }}
+      >
+        Overview - Today
+      </h2>
 
       Page Views
       87
