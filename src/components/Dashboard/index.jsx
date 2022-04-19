@@ -4,6 +4,7 @@ import { ThemeContext } from '../../ThemeContext';
 import FollowersCard from './FollowersCard';
 import Header from './Header';
 import styles from './Dashboard.module.css';
+import DetailCard from './DetailCard';
 
 const data = [
   {
@@ -73,6 +74,7 @@ function Dashboard() {
         Overview - Today
       </h2>
 
+      <DetailCard />
       Page Views
       87
       3%
