@@ -1,5 +1,5 @@
 .trend {
-  --gap: .5rem;
+  --col-gap: .5rem;
   align-items: center;
   color: var(--clr-trend);
 }

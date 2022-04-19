@@ -14,6 +14,20 @@ const data = [
     trend: 'up',
     trendStat: 12,
     username: '@nathanf',
+    details: [
+      {
+        label: 'Page Views',
+        stat: '87',
+        trend: 'up',
+        trendStat: 3,
+      },
+      {
+        label: 'Likes',
+        stat: '52',
+        trend: 'down',
+        trendStat: 2,
+      },
+    ],
   },
   {
     label: 'followers',
@@ -22,6 +36,20 @@ const data = [
     trend: 'up',
     trendStat: 99,
     username: '@nathanf',
+    details: [
+      {
+        label: 'Retweets',
+        stat: '117',
+        trend: 'up',
+        trendStat: 303,
+      },
+      {
+        label: 'Likes',
+        stat: '507',
+        trend: 'up',
+        trendStat: 553,
+      },
+    ],
   },
   {
     label: 'followers',
@@ -30,6 +58,20 @@ const data = [
     trend: 'up',
     trendStat: 1099,
     username: '@realnathanf',
+    details: [
+      {
+        label: 'Likes',
+        stat: '5462',
+        trend: 'up',
+        trendStat: 2257,
+      },
+      {
+        label: 'Profile Views',
+        stat: '52k',
+        trend: 'up',
+        trendStat: 1375,
+      },
+    ],
   },
   {
     label: 'subscribers',
@@ -38,6 +80,20 @@ const data = [
     trend: 'down',
     trendStat: 144,
     username: 'Nathan F.',
+    details: [
+      {
+        label: 'Likes',
+        stat: '107',
+        trend: 'down',
+        trendStat: 19,
+      },
+      {
+        label: 'Total Views',
+        stat: '1407',
+        trend: 'down',
+        trendStat: 12,
+      },
+    ],
   },
 ];
 
@@ -74,38 +130,21 @@ function Dashboard() {
         Overview - Today
       </h2>
 
-      <DetailCard />
-      Page Views
-      87
-      3%
-
-      Likes
-      52
-      2%
-
-      Likes
-      5462
-      2257%
-
-      Profile Views
-      52k
-      1375%
-
-      Retweets
-      117
-      303%
-
-      Likes
-      507
-      553%
-
-      Likes
-      107
-      19%
-
-      Total Views
-      1407
-      12%
+      <div className={`grid ${styles.list} ${styles.smallGap}`}>
+        { data.map(({
+          network, details,
+        }) => details.map(({
+          label, stat, trend, trendStat,
+        }) => (
+          <DetailCard
+            label={label}
+            network={network}
+            stat={stat}
+            trend={trend}
+            trendStat={trendStat}
+          />
+        )))}
+      </div>
 
     </div>
   );

@@ -3,14 +3,22 @@
   margin-bottom: 3rem;
 }
 
-@media (min-width: 30rem) {
+.list.smallGap {
+  --gap: 1rem;
+}
+
+@media (min-width: 33.625rem) {
   .list {
     --gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .list.smallGap {
+    --col-gap: 2rem;
+  }
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 66.5rem) {
   .list {
     grid-template-columns: repeat(4, 1fr);
   }
