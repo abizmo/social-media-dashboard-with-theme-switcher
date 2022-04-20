@@ -14,7 +14,7 @@ function App() {
   const { dark } = useContext(ThemeContext);
 
   return (
-    <div
+    <main
       data-theme={dark ? 'dark' : 'light'}
       style={style}
     >
@@ -29,7 +29,7 @@ function App() {
         <a href="https://www.abizmo.dev">Abián Izquierdo</a>
         .
       </footer>
-    </div>
+    </main>
   );
 }
 
