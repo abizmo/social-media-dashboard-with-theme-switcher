@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import { ThemeContext } from '../../ThemeContext';
 import FollowersCard from './FollowersCard';
 import Header from './Header';
 import styles from './Dashboard.module.css';
@@ -98,13 +97,10 @@ const data = [
 ];
 
 function Dashboard() {
-  const { dark } = useContext(ThemeContext);
-
   return (
     <div
       className="container"
       style={{ paddingBlock: '2rem' }}
-      data-theme={dark ? 'dark' : 'light'}
     >
       <Header />
 
