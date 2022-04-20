@@ -1,0 +1,9 @@
+.trend {
+  --col-gap: .5rem;
+  align-items: center;
+  color: var(--clr-trend);
+}
+
+.trend img {
+  height: .375rem;
+}

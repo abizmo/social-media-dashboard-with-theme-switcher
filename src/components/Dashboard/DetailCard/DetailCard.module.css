@@ -1,0 +1,16 @@
+.card {
+  background-color: var(--clr-card-bg);
+  border-radius: .25rem;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.col {
+  --gap: 1.5rem;
+  flex-direction: column;
+}
+
+.col.right {
+  align-items: end;
+  justify-content: space-between;
+}

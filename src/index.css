@@ -1,7 +1,7 @@
 /* Custom properties */
 :root {
-  --clr-accent-green: hsl(163 72% 41%);
-  --clr-accent-red: hsl(356 69% 56%);
+  --clr-accent-up: hsl(163 72% 41%);
+  --clr-accent-down: hsl(356 69% 56%);
   /* light theme */
   --clr-toggle: hsl(230 22% 74%);
   --clr-bg: hsl(0 0% 100%);
@@ -85,12 +85,16 @@ body {
 
 .flex {
   display: flex;
-  gap: var(--gap, 1rem);
+  gap:
+    var(--row-gap, var(--gap, 1rem))
+    var(--col-gap, var(--gap, 1rem));
 }
 
 .grid {
   display: grid;
-  gap: var(--gap, 1rem);
+  gap:
+    var(--row-gap, var(--gap, 1rem))
+    var(--col-gap, var(--gap, 1rem));
 }
 
 /* hide content */
@@ -128,6 +132,10 @@ body {
 
 .fs-100 {
   font-size: var(--fs-100);
+}
+
+.fw-thin {
+  font-weight: 400;
 }
 
 .letter-spacing-1 {
