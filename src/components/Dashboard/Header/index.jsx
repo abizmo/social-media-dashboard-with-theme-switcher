@@ -19,7 +19,6 @@ function Header() {
         <button
           className={styles.switch}
           type="button"
-          aria-controls="dark-mode"
           aria-checked={dark}
           role="switch"
           onClick={toggleDark}
