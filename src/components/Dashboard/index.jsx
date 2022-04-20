@@ -100,7 +100,7 @@ function Dashboard() {
   return (
     <div
       className="container"
-      style={{ paddingBlock: '2rem' }}
+      style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
     >
       <Header />
 
